@@ -85,6 +85,9 @@ async function loadSnippets() {
         if (savedLang && languages.has(savedLang)) languageSelect.value = savedLang;
         if (savedDiff && difficulties.has(savedDiff)) difficultySelect.value = savedDiff;
 
+        snippetsLoaded = true;
+
+
     } catch (err) {
         console.error("❌ Failed to load snippets.json:", err);
         alert("Failed to load code snippets.");
